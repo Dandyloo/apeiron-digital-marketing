@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Apeiron Digital Marketing - Get in touch for professional digital marketing services in Ghana">
+    <meta name="keywords" content="contact apeiron, digital marketing consultation, get a quote, contact form">
+    <meta name="author" content="Apeiron Digital Marketing">
+    
+    <title>Contact Us | Apeiron Digital Marketing</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact-page.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.jpg" alt="Apeiron Logo" class="logo-image">
+                </a>
+                <div class="logo-content">
+                    <span class="logo-main">APEIRON</span>
+                    <span class="logo-bottom">Digital Marketing</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+            </ul>
+
+            <!-- CTA Button -->
+            <a href="../pages/contact.html" class="nav-cta">Contact</a>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CONTACT HERO SECTION -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1 class="contact-hero-title">Let's Work Together</h1>
+            <p class="contact-hero-subtitle">Ready to elevate your digital presence? Get in touch and let's create something amazing.</p>
+        </div>
+    </section>
+
+
+    <!-- QUICK CONTACT INFO -->
+    <section class="quick-contact">
+        <div class="quick-contact-container">
+            <div class="quick-contact-card">
+                <div class="qc-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3 class="qc-title">Call Us</h3>
+                <p class="qc-text">Mon - Fri, 9AM - 6PM</p>
+                <a href="tel:+233123456789" class="qc-link">+233 123 456 789</a>
+            </div>
+
+            <div class="quick-contact-card">
+                <div class="qc-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="qc-title">Email Us</h3>
+                <p class="qc-text">We'll respond within 24hrs</p>
+                <a href="mailto:info@apeirondigital.com" class="qc-link">info@apeirondigital.com</a>
+            </div>
+
+            <div class="quick-contact-card">
+                <div class="qc-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="qc-title">Visit Us</h3>
+                <p class="qc-text">Cape Coast, Ghana</p>
+                <a href="#map-section" class="qc-link">View on Map</a>
+            </div>
+
+            <div class="quick-contact-card">
+                <div class="qc-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3 class="qc-title">WhatsApp</h3>
+                <p class="qc-text">Quick response via chat</p>
+                <a href="https://wa.me/233123456789" target="_blank" class="qc-link">Chat Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="form-left">
+                <h2 class="form-section-title">Send Us a Message</h2>
+                <p class="form-section-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+233 123 456 789">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Business</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company Name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Service Interested In <span class="required">*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="social-media">Social Media Management</option>
+                                <option value="content">Content Creation</option>
+                                <option value="digital-pr">Digital PR Services</option>
+                                <option value="branding">Branding & Rebranding</option>
+                                <option value="web-design">Web Design & Development</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-2000">Under GHS 2,000</option>
+                                <option value="2000-5000">GHS 2,000 - 5,000</option>
+                                <option value="5000-10000">GHS 5,000 - 10,000</option>
+                                <option value="10000-plus">GHS 10,000+</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project and goals..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <span>Subscribe to our newsletter for digital marketing tips and updates</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+
+            <div class="form-right">
+                <div class="contact-info-card">
+                    <h3 class="info-card-title">Why Choose Apeiron?</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Fast Response Time</h4>
+                            <p>We respond to all inquiries within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Expert Team</h4>
+                            <p>Work with experienced digital marketing professionals</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Proven Results</h4>
+                            <p>92% client satisfaction rate with measurable outcomes</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Personalized Service</h4>
+                            <p>Tailored strategies designed for your unique needs</p>
+                        </div>
+                    </div>
+
+                    <div class="info-divider"></div>
+
+                    <div class="business-hours">
+                        <h4 class="hours-title">Business Hours</h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <span>10:00 AM - 3:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4 class="social-title">Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" class="social-btn">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-btn">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-btn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions? We've got answers</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does it take to see results?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Results vary by service. Social media campaigns typically show engagement improvements within 2-4 weeks, while SEO and branding initiatives may take 3-6 months for significant impact. We provide regular progress reports throughout.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are your pricing models?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing based on your needs: monthly retainers for ongoing services, project-based pricing for one-time work, and custom packages for comprehensive campaigns. Check our Services page for detailed pricing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you work with businesses outside Ghana?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! While we're based in Ghana, we work with clients across Africa and internationally. Our digital-first approach allows us to collaborate effectively regardless of location.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What makes Apeiron different from other agencies?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our client-centric approach, local market expertise, data-driven strategies, and proven track record set us apart. We combine creative excellence with measurable results, ensuring your investment delivers real ROI.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I see examples of your previous work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Visit our Portfolio page to see detailed case studies of our successful projects across branding, social media, web design, and more. We're proud to showcase our work and results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer free consultations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a free initial consultation to understand your needs, discuss your goals, and recommend the best strategy for your business. Contact us to schedule your consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MAP SECTION -->
+    <section class="map-section" id="map-section">
+        <div class="map-container">
+            <div class="map-wrapper">
+                <!-- Replace with your actual Google Maps embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127118.8455793244!2d-1.3538460768189478!3d5.105786846186863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddf0b8f77a7d85%3A0x69e5c10bd1e5bb4a!2sCape%20Coast%2C%20Ghana!5e0!3m2!1sen!2sus!4v1703000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="map-info">
+                <h3 class="map-title">Visit Our Office</h3>
+                <p class="map-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Cape Coast, Ghana
+                </p>
+                <p class="map-text">We'd love to meet you in person! Schedule an appointment or drop by during business hours.</p>
+                <a href="tel:+233123456789" class="btn-primary">
+                    <i class="fas fa-phone"></i> Call to Schedule Visit
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpg" alt="Apeiron Logo" class="footer-logo-img">
+                        <div class="footer-logo-text">
+                            <span class="footer-logo-name">APEIRON</span>
+                            <span class="footer-logo-tagline">Digital Marketing</span>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        Professional digital marketing agency based in Ghana, delivering innovative solutions that drive growth and visibility.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pages/about.html">About Us</a></li>
+                        <li><a href="../pages/services.html">Services</a></li>
+                        <li><a href="../pages/portfolio.html">Portfolio</a></li>
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/services.html#social-media">Social Media Management</a></li>
+                        <li><a href="../pages/services.html#content">Content Creation</a></li>
+                        <li><a href="../pages/services.html#digital-pr">Digital PR Services</a></li>
+                        <li><a href="../pages/services.html#branding">Branding & Rebranding</a></li>
+                        <li><a href="../pages/services.html#web-design">Web Design & Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cape Coast, Ghana</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+233123456789">+233 123 456 789</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@apeirondigital.com">info@apeirondigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2025 Apeiron Digital Marketing. All rights reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="../pages/privacy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="../pages/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Link to JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
