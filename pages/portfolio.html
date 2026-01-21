@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Apeiron's portfolio of successful digital marketing projects - branding, social media, web design and more">
-    <meta name="keywords" content="portfolio, digital marketing projects, case studies, client work, apeiron portfolio">
+    <meta name="description" content="Explore Apeiron's portfolio of successful digital marketing projects">
+    <meta name="keywords" content="portfolio, digital marketing projects, case studies, client work">
     <meta name="author" content="Apeiron Digital Marketing">
     
     <title>Our Portfolio | Apeiron Digital Marketing</title>
@@ -21,7 +21,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="portfolio-page">
     
     <!-- NAVIGATION BAR -->
     <nav class="navbar">
@@ -54,6 +54,10 @@
                 <li class="nav-item">
                     <a href="../pages/portfolio.html" class="nav-link active">Portfolio</a>
                 </li>
+                <!-- Mobile Contact Link (shows only on mobile) -->
+                <li class="nav-item mobile-contact-link">
+                    <a href="../pages/contact.html" class="nav-link">Contact Us</a>
+                </li>
             </ul>
 
             <!-- CTA Button -->
@@ -72,234 +76,128 @@
     <!-- PORTFOLIO HERO SECTION -->
     <section class="portfolio-hero">
         <div class="portfolio-hero-content">
-            <h1 class="portfolio-hero-title">Our Portfolio</h1>
-            <p class="portfolio-hero-subtitle">Transforming brands through creative excellence and strategic innovation</p>
+            <h1 class="portfolio-hero-title">Our <span class="highlight">Creative Portfolio</span></h1>
+            <p class="portfolio-hero-subtitle">Showcasing our finest work - where strategy meets creativity to deliver remarkable results for brands that dare to stand out</p>
         </div>
     </section>
 
 
-    <!-- TRUSTED BY SECTION -->
-    <section class="trusted-by">
-        <div class="trusted-container">
-            <h2 class="trusted-title">Trusted By Leading Brands</h2>
-            <div class="trusted-logos">
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-1.png" alt="Client 1">
+    <!-- PORTFOLIO GRID SECTION -->
+    <section class="portfolio-grid-section">
+        <div class="portfolio-grid-container">
+            <div class="portfolio-grid">
+                
+                <!-- Portfolio Card 1 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=800&fit=crop" alt="Project 1" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Branding</span>
+                            <h3 class="portfolio-card-title">EcoGreen Rebranding</h3>
+                            <p class="portfolio-card-description">Complete brand transformation with modern identity</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-2.png" alt="Client 2">
+
+                <!-- Portfolio Card 2 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=800&fit=crop" alt="Project 2" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Social Media</span>
+                            <h3 class="portfolio-card-title">StyleHub Campaign</h3>
+                            <p class="portfolio-card-description">320% follower growth in 6 months</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-3.png" alt="Client 3">
+
+                <!-- Portfolio Card 3 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=800&fit=crop" alt="Project 3" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Web Design</span>
+                            <h3 class="portfolio-card-title">TechVision Website</h3>
+                            <p class="portfolio-card-description">Modern, conversion-focused design</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-4.png" alt="Client 4">
+
+                <!-- Portfolio Card 4 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=800&fit=crop" alt="Project 4" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Content Creation</span>
+                            <h3 class="portfolio-card-title">FreshBites Content</h3>
+                            <p class="portfolio-card-description">Professional food photography & videos</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-5.png" alt="Client 5">
+
+                <!-- Portfolio Card 5 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=800&fit=crop" alt="Project 5" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Digital PR</span>
+                            <h3 class="portfolio-card-title">UrbanLife PR Campaign</h3>
+                            <p class="portfolio-card-description">45 media placements, 12M impressions</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="logo-item">
-                    <img src="../assets/images/client-logo-6.png" alt="Client 6">
+
+                <!-- Portfolio Card 6 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=800&fit=crop" alt="Project 6" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Branding</span>
+                            <h3 class="portfolio-card-title">PureWave Identity</h3>
+                            <p class="portfolio-card-description">Complete brand identity from scratch</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Portfolio Card 7 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=800&fit=crop" alt="Project 7" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Social Media</span>
+                            <h3 class="portfolio-card-title">FitZone Growth</h3>
+                            <p class="portfolio-card-description">400% Instagram follower increase</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 8 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=800&fit=crop" alt="Project 8" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Web Design</span>
+                            <h3 class="portfolio-card-title">Luxe Hotel E-Commerce</h3>
+                            <p class="portfolio-card-description">Booking platform with 300% direct bookings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 9 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-inner">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&h=800&fit=crop" alt="Project 9" class="portfolio-card-image">
+                        <div class="portfolio-card-overlay">
+                            <span class="portfolio-card-category">Content Creation</span>
+                            <h3 class="portfolio-card-title">Urban Vibes Blog</h3>
+                            <p class="portfolio-card-description">SEO-optimized content strategy</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
-
-    <!-- PORTFOLIO FILTER & GRID SECTION -->
-    <section class="portfolio-section">
-        <div class="portfolio-container">
-            <!-- Filter Categories -->
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="social-media">Social Media</button>
-                <button class="filter-btn" data-filter="content">Content Creation</button>
-                <button class="filter-btn" data-filter="digital-pr">Digital PR</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-                <button class="filter-btn" data-filter="web-design">Web Design</button>
-            </div>
-
-            <!-- Portfolio Masonry Grid -->
-            <div class="portfolio-masonry-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-project" data-category="branding">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/ecogreen.png" alt="EcoGreen Rebranding" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Branding & Design</span>
-                            <h3 class="project-title">EcoGreen Rebranding</h3>
-                            <button class="view-project-btn" data-project="1">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="portfolio-project tall" data-category="social-media">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-2.jpg" alt="StyleHub Campaign" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Social Media</span>
-                            <h3 class="project-title">StyleHub Social Campaign</h3>
-                            <button class="view-project-btn" data-project="2">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-project" data-category="web-design">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-3.jpg" alt="TechVision Website" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Web Design</span>
-                            <h3 class="project-title">TechVision Website Redesign</h3>
-                            <button class="view-project-btn" data-project="3">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="portfolio-project" data-category="content">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-4.jpg" alt="FreshBites Content" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Content Creation</span>
-                            <h3 class="project-title">FreshBites Content Series</h3>
-                            <button class="view-project-btn" data-project="4">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="portfolio-project tall" data-category="digital-pr">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-5.jpg" alt="UrbanLife PR Campaign" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Digital PR</span>
-                            <h3 class="project-title">UrbanLife PR Campaign</h3>
-                            <button class="view-project-btn" data-project="5">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="portfolio-project" data-category="branding">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-6.jpg" alt="PureWave Branding" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Branding</span>
-                            <h3 class="project-title">PureWave Brand Identity</h3>
-                            <button class="view-project-btn" data-project="6">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="portfolio-project" data-category="social-media">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-7.jpg" alt="FitZone Social" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Social Media</span>
-                            <h3 class="project-title">FitZone Instagram Growth</h3>
-                            <button class="view-project-btn" data-project="7">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="portfolio-project" data-category="web-design">
-                    <div class="project-image-wrapper">
-                        <img src="../assets/images/project-8.jpg" alt="Luxe Hotel Website" class="project-image">
-                        <div class="project-overlay">
-                            <span class="project-category">Web Design</span>
-                            <h3 class="project-title">Luxe Hotel E-Commerce</h3>
-                            <button class="view-project-btn" data-project="8">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="btn-primary load-more-btn">
-                    Load More Projects <i class="fas fa-chevron-down"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- PROJECT MODAL -->
-    <div class="project-modal" id="projectModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="modal-body">
-                <!-- Project Header -->
-                <div class="modal-header">
-                    <span class="modal-category"></span>
-                    <h2 class="modal-title"></h2>
-                    <p class="modal-client"></p>
-                </div>
-
-                <!-- Before/After Slider (for branding projects) -->
-                <div class="before-after-container" style="display: none;">
-                    <div class="before-after-slider">
-                        <div class="ba-images">
-                            <img src="" alt="Before" class="ba-before">
-                            <img src="" alt="After" class="ba-after">
-                        </div>
-                        <input type="range" min="0" max="100" value="50" class="ba-slider" id="baSlider">
-                        <div class="ba-labels">
-                            <span class="ba-label">BEFORE</span>
-                            <span class="ba-label">AFTER</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Regular Project Image -->
-                <div class="modal-image-container">
-                    <img src="" alt="" class="modal-image">
-                </div>
-
-                <!-- Project Details -->
-                <div class="modal-details">
-                    <div class="detail-section">
-                        <h3 class="detail-title">Project Overview</h3>
-                        <p class="detail-text modal-description"></p>
-                    </div>
-
-                    <div class="detail-section">
-                        <h3 class="detail-title">Services Provided</h3>
-                        <ul class="services-list modal-services"></ul>
-                    </div>
-
-                    <div class="detail-section">
-                        <h3 class="detail-title">Results</h3>
-                        <div class="results-grid modal-results"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- CTA SECTION -->
@@ -419,6 +317,5 @@
 
     <!-- Link to JavaScript -->
     <script src="../js/main.js"></script>
-    <script src="../js/portfolio.js"></script>
 </body>
 </html>

@@ -242,6 +242,27 @@ section {
     transition: var(--transition);
 }
 
+/* Mobile Contact Link - Hidden on Desktop */
+.mobile-contact-link {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-contact-link {
+        display: block;
+    }
+    
+    .mobile-contact-link .nav-link {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        margin-top: 1rem;
+        display: inline-block;
+        width: auto;
+    }
+}
+
 
 /* ===== HERO SECTION ===== */
 .hero {
