@@ -41,7 +41,7 @@ const projectsData = {
             { number: "150%", label: "Website Traffic" }
         ],
         hasBeforeAfter: false,
-        image: "../assets/images/stylehub.png"
+        image: "https://res.cloudinary.com/djmyiuu5k/image/upload/v1769555645/stylehub_stjxiv.jpg"
     },
     3: {
         category: "Web Design & Development",
@@ -62,7 +62,7 @@ const projectsData = {
             { number: "220%", label: "Page Speed Increase" }
         ],
         hasBeforeAfter: false,
-        image: "../assets/images/techvision.png"
+        image: "../https://res.cloudinary.com/djmyiuu5k/image/upload/v1769555647/techvision_vcclpq.jpg"
     },
     4: {
         category: "Content Creation",

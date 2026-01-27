@@ -57,6 +57,69 @@ body.portfolio-page {
 }
 
 
+/* ===== TRUSTED BY SECTION ===== */
+.trusted-by-section {
+    background: var(--white);
+    padding: 5rem 2rem 4rem;
+}
+
+.trusted-by-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trusted-by-title {
+    color: var(--secondary-color);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.trusted-by-subtitle {
+    color: var(--text-light);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.brand-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+}
+
+.brand-logo {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.brand-item:hover .brand-logo {
+    transform: scale(1.05);
+}
+
+
 /* Portfolio Grid Section */
 .portfolio-grid-section {
     padding: 4rem 2rem 6rem;
@@ -158,6 +221,19 @@ body.portfolio-page {
         min-height: 35vh;
     }
 
+    .trusted-by-section {
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+
+    .brand-logo {
+        max-width: 120px;
+    }
+
     .portfolio-grid-section {
         padding: 3rem 1.5rem 5rem;
     }
@@ -177,6 +253,28 @@ body.portfolio-page {
     .portfolio-hero {
         padding: 9rem 1.5rem 3rem;
         min-height: 30vh;
+    }
+
+    .trusted-by-section {
+        padding: 3rem 1.5rem 2.5rem;
+    }
+
+    .trusted-by-title {
+        margin-bottom: 0.8rem;
+    }
+
+    .trusted-by-subtitle {
+        margin-bottom: 2.5rem;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .brand-logo {
+        max-width: 130px;
     }
 
     .portfolio-grid-section {
@@ -200,6 +298,18 @@ body.portfolio-page {
 @media screen and (max-width: 480px) {
     .portfolio-hero {
         padding: 8rem 1rem 2.5rem;
+    }
+
+    .trusted-by-section {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .brands-grid {
+        gap: 1.5rem 2rem;
+    }
+
+    .brand-logo {
+        max-width: 110px;
     }
 
     .portfolio-grid-section {
