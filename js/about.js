@@ -6,9 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     videos.forEach((video, index) => {
         const overlay = playOverlays[index];
         
-        // Hide overlay when video starts playing
+        // Pause all other videos when this one starts playing
         video.addEventListener('play', () => {
             overlay.style.display = 'none';
+            
+            // Pause all other videos
+            videos.forEach((otherVideo, otherIndex) => {
+                if (otherIndex !== index && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
         });
 
         // Show overlay when video is paused
