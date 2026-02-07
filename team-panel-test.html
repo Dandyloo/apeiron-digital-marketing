@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Panel Diagnostic Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .debug-section h2 {
+            color: #1a3a6c;
+            margin-top: 0;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        /* Simple test panel styles */
+        .team-member-item {
+            padding: 20px;
+            margin: 10px 0;
+            background: #1a3a6c;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .team-member-item:hover {
+            transform: translateY(-5px);
+            background: #d4af37;
+        }
+        
+        .panel-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        .panel-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .team-member-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 500px;
+            max-width: 90%;
+            height: 100vh;
+            background: white;
+            z-index: 10000;
+            overflow-y: auto;
+            transition: right 0.5s ease;
+            box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
+        }
+        .team-member-panel.active {
+            right: 0;
+        }
+        
+        .panel-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #1a3a6c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+        
+        .panel-content {
+            padding: 60px 30px 30px;
+        }
+        
+        #console-log {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-section">
+        <h2>🔍 Team Member Panel Diagnostic Test</h2>
+        <p>This page will help identify why the team member panel isn't working.</p>
+    </div>
+
+    <div class="debug-section">
+        <h2>📊 Diagnostic Results</h2>
+        <div id="diagnostic-results"></div>
+    </div>
+
+    <div class="debug-section">
+        <h2>🧪 Click These Test Team Members</h2>
+        <div class="team-member-item" data-member="1">
+            <strong>Sarah Mensah</strong> - Founder & Creative Director<br>
+            <small>Click me to test the panel!</small>
+        </div>
+        <div class="team-member-item" data-member="2">
+            <strong>Kwame Osei</strong> - Head of Strategy<br>
+            <small>Click me to test the panel!</small>
+        </div>
+    </div>
+
+    <div class="debug-section">
+        <h2>📝 Console Log Output</h2>
+        <div id="console-log"></div>
+    </div>
+
+    <!-- Panel Overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Team Member Panel -->
+    <div class="team-member-panel">
+        <button class="panel-close">✕</button>
+        <div class="panel-content">
+            <h2 class="panel-member-name">Loading...</h2>
+            <p class="panel-member-role">Loading...</p>
+            <div class="panel-quote-text">Loading...</div>
+            <div class="panel-section-content"></div>
+            <ul class="panel-expertise-list"></ul>
+            <div class="panel-stats"></div>
+            <div class="panel-social"></div>
+        </div>
+    </div>
+
+    <script>
+        // Custom console.log that displays on page
+        const consoleDiv = document.getElementById('console-log');
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        
+        function logToPage(message, type = 'log') {
+            const timestamp = new Date().toLocaleTimeString();
+            const prefix = type === 'error' ? '❌' : type === 'warn' ? '⚠️' : '✅';
+            consoleDiv.innerHTML += `[${timestamp}] ${prefix} ${message}\n`;
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            logToPage(args.join(' '), 'log');
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            logToPage(args.join(' '), 'error');
+        };
+        
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            logToPage(args.join(' '), 'warn');
+        };
+
+        // Run diagnostics
+        const diagnosticResults = document.getElementById('diagnostic-results');
+        
+        function addDiagnostic(message, isSuccess) {
+            const div = document.createElement('div');
+            div.className = `status ${isSuccess ? 'success' : 'error'}`;
+            div.textContent = message;
+            diagnosticResults.appendChild(div);
+        }
+
+        // Check 1: Elements exist
+        const teamItems = document.querySelectorAll('.team-member-item');
+        const panel = document.querySelector('.team-member-panel');
+        const overlay = document.querySelector('.panel-overlay');
+        const closeBtn = document.querySelector('.panel-close');
+
+        addDiagnostic(`Found ${teamItems.length} team member items`, teamItems.length > 0);
+        addDiagnostic('Panel element exists', !!panel);
+        addDiagnostic('Overlay element exists', !!overlay);
+        addDiagnostic('Close button exists', !!closeBtn);
+
+        // Check 2: Data attributes
+        teamItems.forEach((item, index) => {
+            const memberId = item.getAttribute('data-member');
+            addDiagnostic(`Team member ${index + 1} has data-member="${memberId}"`, !!memberId);
+        });
+
+        // Team member data
+        const teamMembersData = {
+            1: {
+                name: "Sarah Mensah",
+                role: "Founder & Creative Director",
+                quote: "This is a test quote for Sarah.",
+                story: "This is Sarah's story.",
+                expertise: ["Skill 1", "Skill 2"],
+                stats: [
+                    { number: "3+", label: "Years" }
+                ],
+                social: []
+            },
+            2: {
+                name: "Kwame Osei",
+                role: "Head of Strategy",
+                quote: "This is a test quote for Kwame.",
+                story: "This is Kwame's story.",
+                expertise: ["Skill 1", "Skill 2"],
+                stats: [
+                    { number: "5+", label: "Years" }
+                ],
+                social: []
+            }
+        };
+
+        console.log('=== Starting Team Panel Test ===');
+        console.log(`Found ${teamItems.length} team member items`);
+        console.log('Panel exists:', !!panel);
+        console.log('Overlay exists:', !!overlay);
+
+        // Setup click handlers
+        teamItems.forEach((item, index) => {
+            console.log(`Setting up click handler for team member ${index + 1}`);
+            
+            item.addEventListener('click', function() {
+                const memberId = item.getAttribute('data-member');
+                console.log(`Team member ${memberId} clicked!`);
+                openPanel(memberId);
+            });
+        });
+
+        // Close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Close button clicked');
+                closePanel();
+            });
+        }
+
+        // Overlay click
+        if (overlay) {
+            overlay.addEventListener('click', function() {
+                console.log('Overlay clicked');
+                closePanel();
+            });
+        }
+
+        function openPanel(memberId) {
+            console.log(`Opening panel for member ${memberId}`);
+            const member = teamMembersData[memberId];
+            
+            if (!member) {
+                console.error(`Member ${memberId} not found in data`);
+                return;
+            }
+
+            // Update panel content
+            const nameEl = panel.querySelector('.panel-member-name');
+            const roleEl = panel.querySelector('.panel-member-role');
+            const quoteEl = panel.querySelector('.panel-quote-text');
+            
+            if (nameEl) nameEl.textContent = member.name;
+            if (roleEl) roleEl.textContent = member.role;
+            if (quoteEl) quoteEl.textContent = member.quote;
+
+            // Show panel
+            console.log('Adding active class to panel and overlay');
+            panel.classList.add('active');
+            overlay.classList.add('active');
+            console.log('Panel should now be visible!');
+            console.log('Panel classes:', panel.className);
+            console.log('Overlay classes:', overlay.className);
+        }
+
+        function closePanel() {
+            console.log('Closing panel');
+            panel.classList.remove('active');
+            overlay.classList.remove('active');
+            console.log('Panel closed');
+        }
+
+        console.log('=== Test page ready! Click a team member above ===');
+    </script>
+</body>
+</html>
