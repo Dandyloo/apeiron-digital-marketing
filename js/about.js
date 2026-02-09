@@ -1,36 +1,36 @@
 // ===== TEAM MEMBERS DATA =====
 const teamMembersData = {
     1: {
-        name: "Nana Adwoa Sey",
-        role: "Founder, Creative Director",
-        bio: "Hi! Nana here! I'm the Founder and Creative Director here at Apeiron, and I've been here for 3 years. I love being a creative director because I get to bring ideas to life and watch brands transform through strategic creativity. When I'm not working on campaigns, I enjoy exploring new design trends and mentoring young creatives. My favorite kind of project to work on is brand identity design - there's something magical about creating a visual language that truly represents a business.",
+        name: "Emmanuella Chinenye",
+        role: "Admin & Creative Assistant",
+        bio: "Hi! Emmanuella here! I'm the Admin and Creative Assistant here at Apeiron, and I've been here for 3 years. I love being a creative assistant because I get to bring ideas to life and watch brands transform through strategic creativity. When I'm not working on campaigns, I enjoy exploring new design trends and mentoring young creatives. My favorite kind of project to work on is brand identity design - there's something magical about creating a visual language that truly represents a business.",
         social: [
             { platform: "LinkedIn", url: "https://linkedin.com" },
             { platform: "Instagram", url: "https://instagram.com" }
         ]
     },
     2: {
-        name: "Norkor Nortey",
+        name: "Aziz",
         role: "Senior Graphic Designer",
-        bio: "Hi! Norkor here! I'm a Senior Graphic Designer here at Apeiron, and I've been here for 2 years and 6 months. I love being a graphic designer because every project is a new canvas to tell a visual story. When I'm sitting behind a screen, putting an awesome design together, it almost feels like I am a conductor of an orchestra directing elements together to form a visual masterpiece. Outside of design, I really enjoy exploring new art exhibitions and experimenting with different creative mediums. My favorite kind of project to work on is social media campaigns.",
+        bio: "Hi! Aziz here! I'm a Senior Graphic Designer here at Apeiron, and I've been here for 2 years and 6 months. I love being a graphic designer because every project is a new canvas to tell a visual story. When I'm sitting behind a screen, putting an awesome design together, it almost feels like I am a conductor of an orchestra directing elements together to form a visual masterpiece. Outside of design, I really enjoy exploring new art exhibitions and experimenting with different creative mediums. My favorite kind of project to work on is social media campaigns.",
         social: [
             { platform: "Behance", url: "https://behance.net" },
             { platform: "Instagram", url: "https://instagram.com" }
         ]
     },
     3: {
-        name: "Kezia Asare-Darko",
+        name: "Abel",
         role: "Graphic Designer",
-        bio: "Hi! Kezia here! I'm a Graphic Designer here at Apeiron, and I've been here for 1 year and 2 months. I love being a graphic designer because when I'm sitting behind a screen, putting an awesome design together, it almost feels like I am a conductor of an orchestra directing elements together to form a visual masterpiece. And I'm absolutely hooked on that feeling, lol. Outside of design, I really enjoy reading works of fiction by African authors and watching animated tv shows. My favorite kind of project to work on is identity design. If I wasn't a graphic designer, I'd probably be an artisan.",
+        bio: "Hi! Abel here! I'm a Graphic Designer here at Apeiron, and I've been here for 1 year and 2 months. I love being a graphic designer because when I'm sitting behind a screen, putting an awesome design together, it almost feels like I am a conductor of an orchestra directing elements together to form a visual masterpiece. And I'm absolutely hooked on that feeling, lol. Outside of design, I really enjoy reading works of fiction by African authors and watching animated tv shows. My favorite kind of project to work on is identity design. If I wasn't a graphic designer, I'd probably be an artisan.",
         social: [
             { platform: "Dribbble", url: "https://dribbble.com" },
             { platform: "Twitter", url: "https://twitter.com" }
         ]
     },
     4: {
-        name: "Team Member 4",
-        role: "Content Strategist",
-        bio: "Hi! I'm a Content Strategist here at Apeiron, and I've been here for 1 year. I love creating content strategies that connect brands with their audiences in meaningful ways. When I'm not crafting campaigns, I enjoy reading, podcasts, and discovering new storytelling formats. My favorite kind of project to work on is brand storytelling campaigns.",
+        name: "Emmanuel Ntim",
+        role: "Web Developer",
+        bio: "Hi! Emmanuel here! I'm a Web Developer here at Apeiron, and I've been here for 1 year. I love creating content strategies that connect brands with their audiences in meaningful ways. When I'm not crafting campaigns, I enjoy reading, podcasts, and discovering new storytelling formats. My favorite kind of project to work on is brand storytelling campaigns.",
         social: [
             { platform: "LinkedIn", url: "https://linkedin.com" },
             { platform: "Medium", url: "https://medium.com" }

@@ -278,10 +278,10 @@
     transform: translateY(-8px);
 }
 
-/* Image wrapper with fixed height like reference */
+/* Image wrapper with aspect ratio matching original image dimensions (505.667 x 632.267) */
 .team-member-image-wrapper {
     width: 100%;
-    height: 450px;
+    aspect-ratio: 505.667 / 632.267; /* Maintains original image proportions (~0.8:1) */
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
@@ -816,12 +816,15 @@
         gap: 2rem;
     }
     
+    /* Team member images remain responsive with aspect ratio */
     .team-member-image-wrapper {
-        height: 400px;
+        max-width: 600px; /* Prevent images from getting too large on tablets */
+        margin: 0 auto;
     }
     
     .team-member-panel {
-        max-width: 100%;
+        max-width: 85%; /* Leave 15% space on the left */
+        width: 85%;
     }
     
     .panel-close {
@@ -869,8 +872,14 @@
         gap: 1.5rem;
     }
     
+    /* Team member images maintain aspect ratio on mobile */
     .team-member-image-wrapper {
-        height: 350px;
+        max-width: 100%; /* Full width on small screens */
+    }
+    
+    .team-member-panel {
+        width: 90%; /* Leave 10% space on the left for very small screens */
+        max-width: 90%;
     }
     
     .panel-content {
