@@ -30,7 +30,7 @@ const teamMembersData = {
     4: {
         name: "Emmanuel Ntim",
         role: "Web Developer",
-        bio: "Hi! Emmanuel here! I'm a Web Developer here at Apeiron, and I've been here for 1 year. I love creating content strategies that connect brands with their audiences in meaningful ways. When I'm not crafting campaigns, I enjoy reading, podcasts, and discovering new storytelling formats. My favorite kind of project to work on is brand storytelling campaigns.",
+        bio: "Hi! Emmanuel here! I'm a Web Developer here at Apeiron, where I help build and maintain our website. I enjoy turning ideas into functional and user-friendly pages that improve our online presence. When I'm not coding, I'm usually on the tennis court",
         social: [
             { platform: "LinkedIn", url: "https://linkedin.com" },
             { platform: "Medium", url: "https://medium.com" }
