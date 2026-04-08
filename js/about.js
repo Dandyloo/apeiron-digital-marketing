@@ -188,17 +188,18 @@ function initVideos() {
 // ===== COUNTER ANIMATION FOR STATS =====
 function animateCounter(element, target, duration) {
     duration = duration || 2000;
-    const start = 0;
+    const originalText = element.textContent;
+    const suffix = originalText.includes('+') ? '+' : originalText.includes('%') ? '%' : '';
     const increment = target / (duration / 16);
-    let current = start;
-    
+    let current = 0;
+
     const timer = setInterval(function() {
         current += increment;
         if (current >= target) {
-            element.textContent = target + (element.textContent.includes('+') ? '+' : element.textContent.includes('%') ? '%' : '');
+            element.textContent = target + suffix;
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : element.textContent.includes('%') ? '%' : '');
+            element.textContent = Math.floor(current) + suffix;
         }
     }, 16);
 }
@@ -214,12 +215,10 @@ function initStatsCounter() {
                 entry.target.classList.add('counted');
                 
                 const statNumbers = entry.target.querySelectorAll('.stat-number');
-                statNumbers.forEach(function(stat) {
-                    const text = stat.textContent;
-                    const value = parseInt(text);
-                    stat.textContent = '0' + (text.includes('+') ? '+' : text.includes('%') ? '%' : '');
-                    animateCounter(stat, value);
-                });
+statNumbers.forEach(function(stat) {
+    const value = parseInt(stat.textContent);
+    animateCounter(stat, value);
+});
             }
         });
     }, { threshold: 0.5 });

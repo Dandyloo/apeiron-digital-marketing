@@ -2,9 +2,22 @@
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
+let lastSubmitTime = 0;
+const SUBMIT_COOLDOWN = 5000;
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // Spam prevention
+        const now = Date.now();
+        if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+            formMessage.textContent = 'Please wait a few seconds before submitting again.';
+            formMessage.classList.add('error');
+            formMessage.style.display = 'block';
+            return;
+        }
+        lastSubmitTime = now;
 
         // Get form data
         const formData = new FormData(contactForm);
@@ -198,22 +211,3 @@ formGroups.forEach(group => {
 });
 
 
-// ===== PREVENT SPAM SUBMISSIONS =====
-let lastSubmitTime = 0;
-const SUBMIT_COOLDOWN = 5000; // 5 seconds
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        const now = Date.now();
-        
-        if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
-            e.preventDefault();
-            formMessage.textContent = 'Please wait a few seconds before submitting again.';
-            formMessage.classList.add('error');
-            formMessage.style.display = 'block';
-            return;
-        }
-        
-        lastSubmitTime = now;
-    });
-}

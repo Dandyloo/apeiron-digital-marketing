@@ -62,7 +62,7 @@ const projectsData = {
             { number: "220%", label: "Page Speed Increase" }
         ],
         hasBeforeAfter: false,
-        image: "../https://res.cloudinary.com/djmyiuu5k/image/upload/v1769555647/techvision_vcclpq.jpg"
+        image: "https://res.cloudinary.com/djmyiuu5k/image/upload/v1769555647/techvision_vcclpq.jpg"
     },
     4: {
         category: "Content Creation",
@@ -214,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== MODAL FUNCTIONALITY =====
 const modal = document.getElementById('projectModal');
+
+if (modal) {
 const modalOverlay = modal.querySelector('.modal-overlay');
 const modalClose = modal.querySelector('.modal-close');
 const viewProjectButtons = document.querySelectorAll('.view-project-btn');
@@ -372,3 +374,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.trusted-by, .portfolio-section');
     sections.forEach(section => observer.observe(section));
 });
+
+} // end if (modal)
